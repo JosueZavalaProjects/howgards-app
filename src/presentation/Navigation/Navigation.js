@@ -13,7 +13,7 @@ const HomeStackNavigator = createNativeStackNavigator();
 function MyStack() {
   return (
     <HomeStackNavigator.Navigator initialRouteName="HomeScreen">
-      <HomeStackNavigator.Screen name="HomeScreen" component={HomeScreen} />
+      <HomeStackNavigator.Screen name="Howgarts App" component={HomeScreen} />
       <HomeStackNavigator.Screen name="Stack" component={StackScreen} />
     </HomeStackNavigator.Navigator>
   );

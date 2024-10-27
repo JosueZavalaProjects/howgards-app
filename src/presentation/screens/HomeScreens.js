@@ -1,23 +1,26 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { Houses } from "../components/Houses/Houses";
 
 export const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <Text
         style={{
           fontSize: 30,
           textAlign: "center",
-          marginTop: "20%",
+          marginTop: "10%",
         }}
       >
-        Home screen
+        Choose your house
       </Text>
-      {/* <TouchableOpacity>
-        <Text>Test</Text>
-      </TouchableOpacity> */}
-      {/*       <TouchableOpacity
+      <Houses />
+
+      {/*  <TouchableOpacity
+        onPress={() => navigation.navigate("Stack")}
         style={{
           backgroundColor: "purple",
           padding: 10,
