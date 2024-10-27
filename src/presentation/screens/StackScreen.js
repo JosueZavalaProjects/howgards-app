@@ -1,7 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View } from "react-native";
 
-export const StackScreen = () => {
+export const StackScreen = ({ route }) => {
+  /* const navigation = useNavigation();
+  const state = navigation.getP(); */
+  const { house } = route.params;
+
+  console.log(house);
   return (
     <View>
       <Text
@@ -11,7 +17,7 @@ export const StackScreen = () => {
           marginTop: "20%",
         }}
       >
-        Stack screen
+        {house}
       </Text>
     </View>
   );

@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+/* import { TouchableOpacity } from "react-native-gesture-handler"; */
 import { Houses } from "../components/Houses/Houses";
 
 export const HomeScreen = () => {

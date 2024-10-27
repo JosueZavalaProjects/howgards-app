@@ -2,6 +2,7 @@ import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { HousesStyles as styles } from "../../theme/theme";
 import { getHouses } from "../../../services/api";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
   /* {
@@ -27,9 +28,10 @@ const DATA = [
 ];
 
 const Item = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("Stack")}
+      onPress={() => navigation.navigate("Stack", { house: item.house })}
       style={{
         /* backgroundColor: "purple", */
         /* color: item.colors[0], */
