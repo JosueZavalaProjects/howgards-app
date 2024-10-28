@@ -21,7 +21,17 @@ export const OptionsCards = ({ colors, house }) => {
           </TouchableOpacity>
         </Col>
         <Col numRows={2} backgroundColor={colors[0]}>
-          <Text style={{ ...styles.text, color: colors[1] }}>Hall of fame</Text>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("HallFame", {
+                house: String(house).toLowerCase(),
+              })
+            }
+          >
+            <Text style={{ ...styles.text, color: colors[1] }}>
+              Hall of fame
+            </Text>
+          </TouchableOpacity>
         </Col>
       </Row>
     </View>

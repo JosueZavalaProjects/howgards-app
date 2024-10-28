@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { OptionsScreen } from "../screens/OptionsScreen";
 import { StoresScreen } from "../screens/StoresScreen";
+import { HallFameScreen } from "../screens/HallFameScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,6 +21,13 @@ function MyStack() {
         component={StoresScreen}
         options={{
           title: "House Store",
+        }}
+      />
+      <HomeStackNavigator.Screen
+        name="HallFame"
+        component={HallFameScreen}
+        options={{
+          title: "Hall of fame",
         }}
       />
     </HomeStackNavigator.Navigator>
