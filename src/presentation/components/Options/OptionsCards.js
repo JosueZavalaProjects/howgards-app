@@ -2,21 +2,18 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { OptionsStyles as styles } from "../../theme/theme";
 import { useNavigation } from "@react-navigation/native";
 
-export const OptionsCards = ({ colors }) => {
-  console.log(colors);
+export const OptionsCards = ({ colors, house }) => {
+  console.log(String(house).toLowerCase());
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Row>
         <Col numRows={2} backgroundColor={colors[0]}>
           <TouchableOpacity
-            onPress={
-              () => navigation.navigate("Store")
-              /* {
-                house: item.house,
-                colors: item.colors,
-                emoji: item.emoji,
-              } */
+            onPress={() =>
+              navigation.navigate("Store", {
+                house: String(house).toLowerCase(),
+              })
             }
           >
             <Text style={{ ...styles.text, color: colors[1] }}>

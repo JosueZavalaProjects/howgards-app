@@ -18,7 +18,7 @@ export const OptionsScreen = ({ route }) => {
       >
         {house} {emoji}
       </Text>
-      <OptionsCards colors={colors} />
+      <OptionsCards colors={colors} house={house} />
     </View>
   );
 };

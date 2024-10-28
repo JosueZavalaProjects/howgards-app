@@ -1,7 +1,13 @@
-import { Text } from "react-native";
 import { STORE_BASE_URL } from "@env";
+import { WebView } from "react-native-webview";
 
-export const StoresScreen = () => {
-  console.log(STORE_BASE_URL);
-  return <Text>URL: {process.env.STORE_BASE_URL}</Text>;
+export const StoresScreen = ({ route }) => {
+  const { house = "gryffindor" } = route.params || {};
+
+  return (
+    <WebView
+      source={{ uri: `${STORE_BASE_URL}/${house}` }}
+      style={{ flex: 1 }}
+    />
+  );
 };
