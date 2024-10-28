@@ -1,11 +1,48 @@
-import { FlatList, Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { OptionsStyles as styles } from "../../theme/theme";
+import { useNavigation } from "@react-navigation/native";
 
-export const OptionsCards = () => {
+export const OptionsCards = ({ colors }) => {
+  console.log(colors);
+  const navigation = useNavigation();
   return (
-    <View style={{}}>
-      <Text style={styles.text}>House Store</Text>
-      <Text style={styles.text}>Hall of Fame</Text>
+    <View style={styles.container}>
+      <Row>
+        <Col numRows={2} backgroundColor={colors[0]}>
+          <TouchableOpacity
+            onPress={
+              () => navigation.navigate("Store")
+              /* {
+                house: item.house,
+                colors: item.colors,
+                emoji: item.emoji,
+              } */
+            }
+          >
+            <Text style={{ ...styles.text, color: colors[1] }}>
+              House Store
+            </Text>
+          </TouchableOpacity>
+        </Col>
+        <Col numRows={2} backgroundColor={colors[0]}>
+          <Text style={{ ...styles.text, color: colors[1] }}>Hall of fame</Text>
+        </Col>
+      </Row>
     </View>
   );
 };
+
+const Col = ({ numRows, backgroundColor = "white", children }) => {
+  return (
+    <View
+      style={{
+        ...styles[`${numRows}col`],
+        backgroundColor,
+      }}
+    >
+      {children}
+    </View>
+  );
+};
+
+const Row = ({ children }) => <View style={styles.row}>{children}</View>;

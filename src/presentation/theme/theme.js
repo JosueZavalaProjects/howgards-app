@@ -25,5 +25,43 @@ export const OptionsStyles = StyleSheet.create({
   text: {
     fontSize: 30,
     textAlign: "center",
+    color: "black",
+  },
+  container: {
+    width: "100%",
+    padding: 8,
+    marginTop: 16,
+    columnGap: 8,
+  },
+  row: {
+    flexDirection: "row",
+    columnGap: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  "1col": {
+    backgroundColor: "lightblue",
+    borderColor: "#fff",
+    borderWidth: 1,
+    flex: 1,
+  },
+  "2col": {
+    backgroundColor: "green",
+    borderColor: "#fff",
+    borderWidth: 1,
+    flex: 2,
+    height: 200,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  "3col": {
+    backgroundColor: "orange",
+    borderColor: "#fff",
+    borderWidth: 1,
+    flex: 3,
+  },
+  "4col": {
+    flex: 4,
   },
 });
