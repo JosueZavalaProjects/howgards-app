@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreen } from "../screens/HomeScreens";
-import { SettingsScreen } from "../screens/SettingsScreen";
+import { HomeScreen } from "../screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StackScreen } from "../screens/StackScreen";
 import { OptionsScreen } from "../screens/OptionsScreen";
+import { StoresScreen } from "../screens/StoresScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,10 +14,13 @@ function MyStack() {
   return (
     <HomeStackNavigator.Navigator initialRouteName="HomeScreen">
       <HomeStackNavigator.Screen name="Howgarts App" component={HomeScreen} />
+      <HomeStackNavigator.Screen name="Options" component={OptionsScreen} />
       <HomeStackNavigator.Screen
-        name="Options"
-        component={OptionsScreen}
-        options={{ headerBackTitle: "Test" }}
+        name="Store"
+        component={StoresScreen}
+        options={{
+          title: "House Store",
+        }}
       />
     </HomeStackNavigator.Navigator>
   );
@@ -45,20 +47,6 @@ function MyTabs() {
           headerShown: false,
         }}
       />
-      {/*   <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{
-          tabBarLabel: "Settings",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="brightness-5"
-              color={color}
-              size={30}
-            />
-          ),
-        }}
-      /> */}
     </Tab.Navigator>
   );
 }

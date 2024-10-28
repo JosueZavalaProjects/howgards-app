@@ -5,7 +5,13 @@ export const HouseItem = ({ item }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("Options", { house: item.house })}
+      onPress={() =>
+        navigation.navigate("Options", {
+          house: item.house,
+          colors: item.colors,
+          emoji: item.emoji,
+        })
+      }
       style={{
         backgroundColor: item.colors[0],
         padding: 20,
