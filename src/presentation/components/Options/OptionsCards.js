@@ -3,7 +3,6 @@ import { OptionsStyles as styles } from "../../theme/theme";
 import { useNavigation } from "@react-navigation/native";
 
 export const OptionsCards = ({ colors, house }) => {
-  console.log(String(house).toLowerCase());
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

@@ -5,8 +5,6 @@ import { OptionsCards } from "../components/Options/OptionsCards";
 export const OptionsScreen = ({ route }) => {
   const { house, colors, emoji } = route.params;
 
-  /* console.log(house);
-  console.log(colors); */
   return (
     <View>
       <Text

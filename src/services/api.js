@@ -1,7 +1,6 @@
+import { HOUSES_API } from "@env";
 export const getHouses = async () => {
-  const response = await fetch(
-    "https://potterapi-fedeperin.vercel.app/en/houses"
-  );
+  const response = await fetch(`${HOUSES_API}`);
 
   return response.json();
 };
