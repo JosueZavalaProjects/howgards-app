@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StackScreen } from "../screens/StackScreen";
+import { OptionsScreen } from "../screens/OptionsScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +15,11 @@ function MyStack() {
   return (
     <HomeStackNavigator.Navigator initialRouteName="HomeScreen">
       <HomeStackNavigator.Screen name="Howgarts App" component={HomeScreen} />
-      <HomeStackNavigator.Screen name="Stack" component={StackScreen} />
+      <HomeStackNavigator.Screen
+        name="Options"
+        component={OptionsScreen}
+        options={{ headerBackTitle: "Test" }}
+      />
     </HomeStackNavigator.Navigator>
   );
 }
@@ -31,17 +36,16 @@ function MyTabs() {
         name="Home"
         component={MyStack}
         options={{
-          tabBarLabel: "Feed",
+          tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
             return (
               <MaterialCommunityIcons name="home" color={color} size={30} />
             );
           },
-          tabBarBadge: 10,
           headerShown: false,
         }}
       />
-      <Tab.Screen
+      {/*   <Tab.Screen
         name="Settings"
         component={SettingsScreen}
         options={{
@@ -54,7 +58,7 @@ function MyTabs() {
             />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }

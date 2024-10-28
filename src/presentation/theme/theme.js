@@ -20,3 +20,10 @@ export const HousesStyles = StyleSheet.create({
     color: "blue",
   },
 });
+
+export const OptionsStyles = StyleSheet.create({
+  text: {
+    fontSize: 30,
+    textAlign: "center",
+  },
+});
