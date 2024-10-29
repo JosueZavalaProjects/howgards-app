@@ -10,6 +10,7 @@ export const OptionsCards = ({ colors, house }) => {
       <Row>
         <Col numRows={2} backgroundColor={colors[0]}>
           <TouchableOpacity
+            style={styles.button}
             onPress={() =>
               navigation.navigate("Store", {
                 house: String(house).toLowerCase(),
@@ -23,6 +24,7 @@ export const OptionsCards = ({ colors, house }) => {
         </Col>
         <Col numRows={2} backgroundColor={colors[0]}>
           <TouchableOpacity
+            style={styles.button}
             onPress={() =>
               navigation.navigate("HallFame", {
                 house: String(house).toLowerCase(),

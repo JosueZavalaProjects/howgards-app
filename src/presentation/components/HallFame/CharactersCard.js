@@ -14,7 +14,7 @@ export const CharacterCard = ({ character }) => {
       }}
     >
       <Image
-        style={{ width: 180, height: 180, borderRadius: 20 }}
+        style={{ width: "100%", height: "100%", borderRadius: 20 }}
         source={{
           uri: character.image,
         }}

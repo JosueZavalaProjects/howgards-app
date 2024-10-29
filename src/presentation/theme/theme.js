@@ -39,6 +39,11 @@ export const OptionsStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    height: 200,
+  },
   "1col": {
     backgroundColor: "lightblue",
     borderColor: "#fff",
@@ -50,9 +55,6 @@ export const OptionsStyles = StyleSheet.create({
     borderColor: "#fff",
     borderWidth: 1,
     flex: 2,
-    height: 200,
-    alignItems: "center",
-    justifyContent: "center",
     borderRadius: 20,
   },
   "3col": {

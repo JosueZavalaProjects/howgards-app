@@ -16,7 +16,7 @@ export const HouseItem = ({ item }) => {
         backgroundColor: item.colors[0],
         padding: 20,
         marginTop: "5%",
-        width: "60%",
+        width: "70%",
         alignSelf: "center",
         borderRadius: 10,
       }}
