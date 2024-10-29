@@ -4,3 +4,9 @@ export const getHouses = async () => {
 
   return response.json();
 };
+
+export const getCharacters = async () => {
+  const response = await fetch(`${POTTER_API}/characters`);
+
+  return response.json();
+};

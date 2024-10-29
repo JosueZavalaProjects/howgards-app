@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { OptionsStyles as styles } from "../../theme/theme";
 import { useNavigation } from "@react-navigation/native";
+import { Col, Row } from "../UI/Layout";
 
 export const OptionsCards = ({ colors, house }) => {
   const navigation = useNavigation();
@@ -37,18 +38,3 @@ export const OptionsCards = ({ colors, house }) => {
     </View>
   );
 };
-
-const Col = ({ numRows, backgroundColor = "white", children }) => {
-  return (
-    <View
-      style={{
-        ...styles[`${numRows}col`],
-        backgroundColor,
-      }}
-    >
-      {children}
-    </View>
-  );
-};
-
-const Row = ({ children }) => <View style={styles.row}>{children}</View>;

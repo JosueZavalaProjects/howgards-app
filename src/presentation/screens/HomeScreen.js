@@ -1,10 +1,8 @@
-import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View } from "react-native";
 import { Houses } from "../components/Houses/Houses";
 
 export const HomeScreen = () => {
-  const navigation = useNavigation();
   return (
     <View>
       <Text
@@ -20,4 +18,3 @@ export const HomeScreen = () => {
     </View>
   );
 };
-
